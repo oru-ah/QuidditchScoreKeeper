@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.quidditchscorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/gryffindor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/gryffindor"
+                android:textAppearance="@style/NameText" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/zeropoints"
+                android:textAppearance="@style/ScoreText" />
+
+            <Button
+                android:id="@+id/pointsA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:onClick="addTenForTeamA"
+                android:text="@string/tenpoints" />
+
+            <ImageButton
+                android:id="@+id/snitchA"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:onClick="snitchForTeamA"
+                android:scaleType="fitCenter"
+                android:src="@drawable/snitch"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/slytherin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/slytherin"
+                android:textAppearance="@style/NameText" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/zeropoints"
+                android:textAppearance="@style/ScoreText" />
+
+            <Button
+                android:id="@+id/pointsB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:onClick="addTenForTeamB"
+                android:text="@string/tenpoints" />
+
+            <ImageButton
+                android:id="@+id/snitchB"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:onClick="snitchForTeamB"
+                android:scaleType="fitCenter"
+                android:src="@drawable/snitch"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/WinnerText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="reset"
+            android:text="@string/new_game" />
+
+    </RelativeLayout>
+
+</LinearLayout>
